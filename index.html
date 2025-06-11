@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project AeroForm - Low Cost UAV Flight Formation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-dharmachakra"></i>
+            </div>
+            <h1>AeroForm</h1>
+        </div>
+        <nav>
+            <button class="menu-btn" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#hardware">Hardware</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <!-- Hero Section -->
+<!-- <section class="hero">
+    <!-- Video Background -->
+    <!-- <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="assets/videos/drone-formation.mp4" type="video/mp4">
+            <source src="assets/videos/drone-formation.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <h2>Low Cost UAV Flight Formation</h2>
+    <p>Revolutionizing drone swarm technology through innovative, cost-effective solutions for autonomous flight coordination and formation control.</p>
+    <a href="#contact" class="cta-btn">Collaborate With Us</a>
+    
+    <div class="drone-animation">
+        <!-- Drones will be added with JS -->
+    <!-- </div>
+</section> --> --> -->
+<div>
+
+    <section class="hero">
+        <h2>Low Cost UAV Flight Formation</h2>
+        <p>Revolutionizing drone swarm technology through innovative, cost-effective solutions for autonomous flight coordination and formation control.</p>
+        <a href="#contact" class="cta-btn">Join Our Team</a>
+        
+        <div class="drone-animation">
+            <!-- Drones will be added with JS -->
+        </div>
+    </section>
+</div>
+    <!-- Abstract Section -->
+    <section id="abstract">
+        <div class="section-title">
+            <h2>Project Abstract</h2>
+        </div>
+        <div class="abstract-content">
+            <p>The AeroForm research project focuses on developing a low-cost solution for UAV (Unmanned Aerial Vehicle) flight formation systems. Traditional drone swarm technologies often rely on expensive hardware and complex systems, limiting their accessibility and practical applications. Our research aims to democratize this technology by creating an affordable, scalable platform for coordinated drone flight.</p>
+            
+            <p>By leveraging off-the-shelf components and open-source software, we've developed a formation control system that maintains precise positioning using a combination of UWB (Ultra-Wideband) for relative localization and RTK-GPS for absolute positioning. Our approach reduces costs by over 60% compared to commercial solutions while maintaining formation accuracy within 30cm.</p>
+            
+            <p>The system implements a leader-follower architecture with distributed decision-making capabilities. Each drone in the formation communicates with adjacent units using a mesh network topology, ensuring robust communication even in challenging environments. Our adaptive control algorithms enable the swarm to maintain formation during complex maneuvers and respond dynamically to environmental obstacles.</p>
+            
+            <p>Potential applications include aerial light shows, agricultural monitoring, search and rescue operations, and infrastructure inspection. This research represents a significant step toward making swarm robotics technology accessible to researchers, educators, and commercial developers.</p>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="dark-bg">
+        <div class="section-title">
+            <h2>Research Methodology</h2>
+        </div>
+        <div class="methodology-grid">
+            <div class="method-card">
+                <h3><i class="fas fa-project-diagram"></i> System Architecture</h3>
+                <p>We developed a hybrid architecture combining centralized planning with decentralized execution. The ground station handles mission planning while drones autonomously execute formation keeping using onboard sensors.</p>
+            </div>
+            <div class="method-card">
+                <h3><i class="fas fa-satellite"></i> Localization System</h3>
+                <p>Implemented a multi-sensor fusion approach combining UWB for relative positioning (accuracy ±15cm) and RTK-GPS for absolute positioning (accuracy ±2cm) with IMU data for orientation estimation.</p>
+            </div>
+            <div class="method-card">
+                <h3><i class="fas fa-network-wired"></i> Communication Protocol</h3>
+                <p>Developed a custom TDMA-based protocol on 900MHz band enabling low-latency communication between drones with <100ms delay, supporting up to 8 drones in formation.</p>
+            </div>
+            <div class="method-card">
+                <h3><i class="fas fa-brain"></i> Control Algorithms</h3>
+                <p>Designed and implemented PID controllers with adaptive gains for formation keeping. Incorporated potential field methods for collision avoidance and formation reconfiguration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware">
+        <div class="section-title">
+            <h2>Hardware Implementation</h2>
+        </div>
+        <div class="hardware-content">
+            <div class="hardware-item">
+                <div class="hardware-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Flight Controller</h3>
+                <p>Custom-designed controller based on Pixhawk 4 running PX4 firmware with extended capabilities for formation flight and swarm communication.</p>
+            </div>
+            <div class="hardware-item">
+                <div class="hardware-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>Communication Module</h3>
+                <p>Dual-band communication system with 900MHz long-range telemetry for ground link and 2.4GHz WiFi mesh for inter-drone communication.</p>
+            </div>
+            <div class="hardware-item">
+                <div class="hardware-icon">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h3>Positioning System</h3>
+                <p>UWB Decawave DWM1000 modules for relative positioning and Here+ RTK GPS system for centimeter-level absolute positioning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software" class="dark-bg">
+        <div class="section-title">
+            <h2>Software Stack</h2>
+        </div>
+        <div class="software-stack">
+            <div class="software-card">
+                <div class="software-icon">
+                    <i class="fab fa-ubuntu"></i>
+                </div>
+                <h3>PX4 Firmware</h3>
+                <p>Customized for formation flight with extended MAVLink messages</p>
+            </div>
+            <div class="software-card">
+                <div class="software-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>ROS 2</h3>
+                <p>Robot Operating System for high-level control and simulation</p>
+            </div>
+            <div class="software-card">
+                <div class="software-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h3>Gazebo</h3>
+                <p>Simulation environment for testing formation algorithms</p>
+            </div>
+            <div class="software-card">
+                <div class="software-icon">
+                    <i class="fas fa-wave-square"></i>
+                </div>
+                <h3>UWB Stack</h3>
+                <p>Custom firmware for Decawave modules with TDoA support</p>
+            </div>
+            <div class="software-card">
+                <div class="software-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>MAVSDK</h3>
+                <p>For ground station control and mission planning</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <!-- <section id="results">
+        <div class="section-title">
+            <h2>Research Results</h2>
+        </div>
+        <div class="results-gallery">
+            <div class="result-item"></div>
+            <div class="result-item"></div>
+            <div class="result-item"></div>
+            <div class="result-item"></div>
+        </div>
+        <div class="results-summary">
+            <h3>Key Achievements</h3>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <h4>Cost Reduction</h4>
+                    <p>62% cheaper than commercial alternatives</p>
+                </div>
+                <div class="achievement-item">
+                    <h4>Formation Accuracy</h4>
+                    <p>±25cm in outdoor conditions</p>
+                </div>
+                <div class="achievement-item">
+                    <h4>Endurance</h4>
+                    <p>22 minutes with 2kg payload</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Results Section -->
+<!-- Results Section -->
+<section id="results">
+    <div class="section-title">
+        <h2>Research Results</h2>
+    </div>
+    <div class="results-gallery">
+        <!-- Video 1 -->
+        <div class="result-item">
+            <video controls poster="assets/images/formation-thumbnail.jpg">
+                <source src="assets/videos/formation-test.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="video-caption">Field Test Formation</div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="result-item">
+            <video controls poster="assets/images/path-thumbnail.jpg">
+                <source src="assets/videos/flight-path.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="video-caption">3D Flight Path Visualization</div>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="result-item">
+            <video controls poster="assets/images/analysis-thumbnail.jpg">
+                <source src="assets/videos/swarm-analysis.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="video-caption">Swarm Behavior Analysis</div>
+        </div>
+        
+        <!-- Video 4 -->
+        <div class="result-item">
+            <video controls poster="assets/images/metrics-thumbnail.jpg">
+                <source src="assets/videos/performance-metrics.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="video-caption">Performance Metrics</div>
+        </div>
+    </div>
+    
+    <div class="results-summary">
+        <!-- ... keep your existing achievements grid ... -->
+    </div>
+</section>
+
+    <!-- Team Section -->
+    <section id="team" class="dark-bg">
+        <div class="section-title">
+            <h2>Research Team</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">Dr. Alex Morgan</h3>
+                <p class="member-role">Principal Investigator</p>
+                <p>Aerospace systems specialist with 12 years of UAV research experience.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">Dr. Samira Khan</h3>
+                <p class="member-role">Control Systems Lead</p>
+                <p>Expert in swarm robotics and distributed control algorithms.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">Dr. James Chen</h3>
+                <p class="member-role">Hardware Engineer</p>
+                <p>Specialized in embedded systems and sensor integration.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">Dr. Elena Rodriguez</h3>
+                <p class="member-role">Software Architect</p>
+                <p>ROS expert with focus on autonomous navigation systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Advanced Robotics Lab, Tech University</p>
+                        <p>123 Innovation Drive, Science Park</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>research@aeroform-project.org</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Office Hours</h4>
+                        <p>Monday-Friday: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Subject of your message" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-dharmachakra"></i>
+                </div>
+                <h1>AeroForm</h1>
+            </div>
+            <p class="footer-description">Advancing the future of autonomous drone swarms through innovative research and accessible technology.</p>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+            </div>
+            
+            <p class="copyright">© 2023 Project AeroForm - Low Cost UAV Flight Formation Research. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
